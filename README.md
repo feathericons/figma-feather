@@ -1,6 +1,6 @@
 # Feather Figma plugin
 
-Quick access to Feather icons in [Figma](https://figma.com).
+Quick access to [Feather](https://feathericons.com) icons in Figma.
 
 👉 https://www.figma.com/c/plugin/744047966581015514/Feather
 
