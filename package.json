@@ -12,7 +12,7 @@
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "css-loader": "^3.0.0",
-    "feather-icons": "^4.22.1",
+    "feather-icons": "^4.24.1",
     "fuse.js": "^3.4.5",
     "html-webpack-inline-source-plugin": "^0.0.10",
     "html-webpack-plugin": "^3.2.0",

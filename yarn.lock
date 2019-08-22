@@ -1353,10 +1353,10 @@ fast-json-stable-stringify@^2.0.0:
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
   integrity sha1-1RQsDK7msRifh9OnYREGT4bIu/I=
 
-feather-icons@^4.22.1:
-  version "4.22.1"
-  resolved "https://registry.yarnpkg.com/feather-icons/-/feather-icons-4.22.1.tgz#d747879ecb83e4d37d95bc9483b909aebebb2dcb"
-  integrity sha512-kup3Nxe9rHLTISgwlkXSIodKNY8FQp/8mo0wHshLNBpblli8KZHyAoxbqspJQT1IbuUfidzxEMRA6z1n4XKMPA==
+feather-icons@^4.24.1:
+  version "4.24.1"
+  resolved "https://registry.yarnpkg.com/feather-icons/-/feather-icons-4.24.1.tgz#f31a83c5a2d1c040576aacb7882d8acdfb7f7f09"
+  integrity sha512-CGBzG9L9M2sNWEpLY2HJgacW4q1KzypMqLiCPQRr6t4uDDXqYprWRWKcHEwD/vDDiDnkSS7N4L5BLYwjGGH8pw==
   dependencies:
     classnames "^2.2.5"
     core-js "^3.1.3"
