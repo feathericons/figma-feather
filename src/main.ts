@@ -7,5 +7,4 @@ figma.ui.onmessage = message => {
   icon.name = message.type
   figma.currentPage.selection = [icon]
   figma.viewport.scrollAndZoomIntoView([icon])
-  figma.closePlugin()
 }
