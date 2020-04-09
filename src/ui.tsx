@@ -34,7 +34,7 @@ function App() {
           }}
         >
           {results.map(icon => (
-            <IconButton name={icon.name} contents={icon.contents} />
+            <IconButton key={icon.name} name={icon.name} contents={icon.contents} stroke={params.stroke as number} onClick={() => parent.postMessage({ pluginMessage: { type: 'PLACE_ICON', icon: icon.name, params } }, '*')} />
           ))}
         </div>
         <div
