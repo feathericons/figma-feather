@@ -7,10 +7,17 @@ import SearchInput from './components/search-input'
 import theme from './theme'
 import './ui.css'
 import useSearch from './use-search'
+import { icons } from 'feather-icons'
+import ParamsList from './components/params'
+import Params from './state/params'
 
 function App() {
   const [query, setQuery] = React.useState('')
   const results = useSearch(query)
+
+  const [showParams, setShowParams] = React.useState(false)
+  const { params } = Params.useContainer()
+
   return (
     <div>
       <Global
@@ -19,12 +26,14 @@ function App() {
       <SearchInput
         value={query}
         onChange={event => setQuery(event.target.value)}
+        rightElement={<IconButton name={icons.menu.name} contents={icons.menu.contents} stroke={2} onClick={() => setShowParams(last => !last)}/>}
         css={{
           position: 'sticky',
           top: 0,
-          borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+          borderBottom: '1px solid #E6E6E6',
         }}
       />
+      <ParamsList show={showParams}/>
       <div css={{ padding: theme.space[2] }}>
         <div
           css={{
@@ -52,4 +61,4 @@ function App() {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Params.Provider><App /></Params.Provider>, document.getElementById('root'))

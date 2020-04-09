@@ -7,12 +7,13 @@ const ICON_COUNT = Object.keys(icons).length
 
 interface SearchInputProps extends React.HTMLProps<HTMLDivElement> {
   value: string
+  rightElement: any
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-function SearchInput({ value, onChange, ...props }: SearchInputProps) {
+function SearchInput({ value, onChange, rightElement, ...props }: SearchInputProps) {
   return (
-    <div css={{ position: 'relative' }} {...props}>
+    <div css={{ position: 'relative', display: 'flex' }} {...props}>
       <div
         css={{
           position: 'absolute',
@@ -30,7 +31,7 @@ function SearchInput({ value, onChange, ...props }: SearchInputProps) {
         onChange={onChange}
         placeholder={`Search ${ICON_COUNT} icons`}
         css={{
-          width: '100%',
+          flex: 1,
           height: 40,
           padding: `0 ${theme.space[4]} 0 36px`,
           fontFamily: 'inherit',
@@ -39,6 +40,7 @@ function SearchInput({ value, onChange, ...props }: SearchInputProps) {
           outline: 0,
         }}
       />
+      { rightElement }
     </div>
   )
 }

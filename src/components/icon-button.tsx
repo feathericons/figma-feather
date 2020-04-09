@@ -4,24 +4,25 @@ import theme from '../theme'
 interface IconButtonProps {
   name: string
   contents: string
+  onClick: () => void
+  stroke?: number
 }
 
-function IconButton({ name, contents }: IconButtonProps) {
+function IconButton({ name, contents, onClick, stroke }: IconButtonProps) {
   return (
     <button
-      key={name}
       aria-label={name}
-      onClick={() => parent.postMessage({ pluginMessage: { type: name } }, '*')}
+      onClick={onClick}
       css={{
         padding: theme.space[2],
         color: '#333',
-        background: 'transparent',
+        background: 'white',
         border: 0,
         borderRadius: theme.radii[1],
         appearance: 'none',
         outline: 0,
         '&:hover': {
-          background: 'rgba(0, 0, 0, 0.06)',
+          background: '#F0F0F0',
         },
         '&:focus, &:active': {
           boxShadow: `inset 0 0 0 2px ${theme.colors.blue}`,
@@ -34,7 +35,7 @@ function IconButton({ name, contents }: IconButtonProps) {
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth={2}
+        strokeWidth={stroke == null ? 2 : stroke}
         strokeLinecap="round"
         strokeLinejoin="round"
         dangerouslySetInnerHTML={{ __html: contents }}
