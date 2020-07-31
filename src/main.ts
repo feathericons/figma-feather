@@ -24,11 +24,11 @@ figma.ui.onmessage = message => {
       {
         // in case our selected node can accept children, place icon in it
         if(canAcceptChildren(topSelectedItem)) {
-          targetParent = topSelectedItem as ((FrameNode & GeometryMixin))
+          targetParent = topSelectedItem as (FrameNode & GeometryMixin)
         // in case selected note can not accept children (like a rectangle)
         // but its parent can, place icon in the parent
         } else {
-          targetParent = topSelectedItem.parent as ((FrameNode & GeometryMixin))
+          targetParent = topSelectedItem.parent as (FrameNode & GeometryMixin)
         }
         targetX = targetParent.type=="FRAME" ? 0 : targetParent.x
         targetY = targetParent.type=="FRAME" ? 0 : targetParent.y
