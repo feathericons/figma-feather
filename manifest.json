@@ -3,5 +3,6 @@
   "id": "744047966581015514",
   "api": "1.0.0",
   "ui": "build/ui.html",
-  "main": "build/main.js"
+  "main": "build/main.js",
+  "editorType": ["figma", "figjam"]
 }
