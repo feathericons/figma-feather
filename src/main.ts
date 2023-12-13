@@ -1,8 +1,8 @@
 import { icons } from 'feather-icons'
 
-figma.showUI(__html__, { width: 300, height: 400 })
+figma.showUI(__html__, { width: 340, height: 420 })
 
-figma.ui.onmessage = message => {
+figma.ui.onmessage = (message) => {
   const icon = figma.createNodeFromSvg(icons[message.type].toSvg())
   icon.name = message.type
   icon.x = figma.viewport.center.x
