@@ -19,6 +19,7 @@ function IconButton({ name, contents }: IconButtonProps) {
         border: 0,
         borderRadius: theme.radii[1],
         appearance: 'none',
+        cursor: 'pointer',
         outline: 0,
         '&:hover': {
           background: 'rgba(0, 0, 0, 0.06)',
